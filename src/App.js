@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  let name = "Amazing Scientist";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-header">
+        <section>
+        {name}
+        <Profile />
+        <Profile />
+        <Profile />
+        <Profile />
+        <Demo />
+        </section>
+      </div>
     </div>
   );
 }
 
+function Demo() {
+  return (
+    <div className="App">
+      <div className="App-header">demo</div>
+    </div>
+  );
+}
+
+ export function Profile() {
+  return (
+    <>
+      <img src="https://placebeard.it/640x360" />
+    </>
+  );
+}
+
+const person = {
+  name: "Harsh",
+  age: 23,
+  graduate: {
+    college: "B N M Institute of Technology",
+    degree: "Btech"
+  } 
+}
+
+export function Details() {
+  return(
+    <>
+    {person.name}
+    {person.graduate.college}
+    </>
+  )
+}
 export default App;
